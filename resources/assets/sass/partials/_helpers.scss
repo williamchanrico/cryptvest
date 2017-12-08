@@ -1,0 +1,317 @@
+// VISIBILITY CLASSES
+.block {
+  display: block
+}
+.inline-block {
+  display: inline-block;
+}
+.start-hidden,
+.hidden {
+  display: none;
+}
+
+// SCREEN READER ONLY CLASS - THANK YOU TWITTER BOOTSTRAP
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+@media(max-width: $phone) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+@media(max-width: $tablet) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+@media(max-width: $desktop) {
+  .hide-tablet-large {
+    display: none !important;
+  }
+}
+
+// ALIGNMENT CLASSES
+.text-center-only {
+  text-align: center;
+}
+.text-center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.full-span {
+  width: 100%;
+}
+
+// ICON HELPER CLASSES
+.icons-inline {
+  display: inline-block;
+  vertical-align: -4px;
+}
+
+// COLOR HELPER CLASSES
+.text-white {
+  color: $theme_color1;
+}
+.bg-white{
+  background: $theme_color1;
+}
+
+// TABLET UP margin TOP
+@media(min-width: $phone) {
+  .margin-top-0-tablet {
+    margin-top: 0;
+  }
+  .margin-top-1-tablet {
+    margin-top: 1em;
+  }
+  .margin-top-2-tablet {
+    margin-top: 2em;
+  }
+  .margin-top-3-tablet {
+    margin-top: 3em;
+  }
+}
+
+// TABLET UP padding TOP
+@media(min-width: $phone) {
+  .padding-top-0-tablet {
+    padding-top: 0;
+  }
+  .padding-top-1-tablet {
+    padding-top: 1em;
+  }
+  .padding-top-2-tablet {
+    padding-top: 2em;
+  }
+  .padding-top-3-tablet {
+    padding-top: 3em;
+  }
+}
+
+// BOTTOM MARGIN CLASSES
+.margin-bottom-half,
+.margin-bottom-half-1 {
+  margin-bottom: .5em;
+}
+// SIDE MARGIN HELPER
+.margin-left-1-1 {
+  margin-left: 1.5em;
+}
+
+// GENERATE MARGIN HELPER CLASSES
+@mixin generate-margin-helper-classes {
+  @for $i from 0 through $num-of-helper-classes {
+    .margin-top-#{$i} {
+      margin-top: (#{$i}em);
+    }
+    .margin-bottom-#{$i} {
+      margin-bottom: (#{$i}em);
+    }
+    .margin-left-#{$i} {
+      margin-left: (#{$i}em);
+    }
+    .margin-right-#{$i} {
+      margin-right: (#{$i}em);
+    }
+    .margin-top-#{$i}-important {
+      margin-top: (#{$i}em) !important;;
+    }
+    .margin-bottom-#{$i}-important {
+      margin-bottom: (#{$i}em) !important;;
+    }
+    .margin-left-#{$i}-important {
+      margin-left: (#{$i}em) !important;;
+    }
+    .margin-right-#{$i}-important {
+      margin-right: (#{$i}em) !important;;
+    }
+  }
+  @media(min-width: $phone){
+    @for $i from 0 through $num-of-helper-classes {
+      .margin-top-#{$i}-tablet-important {
+        margin-top: (#{$i}em) !important;
+      }
+      .margin-top-#{$i}-tablet {
+        margin-top: (#{$i}em);
+      }
+      .margin-bottom-#{$i}-tablet {
+        margin-bottom: (#{$i}em);
+      }
+      .margin-left-#{$i}-tablet {
+        margin-left: (#{$i}em);
+      }
+      .margin-right-#{$i}-tablet {
+        margin-right: (#{$i}em);
+      }
+    }
+  }
+  @media(min-width: $tablet){
+    @for $i from 0 through $num-of-helper-classes {
+      .margin-top-#{$i}-desktop {
+        margin-top: (#{$i}em);
+      }
+      .margin-bottom-#{$i}-desktop {
+        margin-bottom: (#{$i}em);
+      }
+      .margin-left-#{$i}-desktop {
+        margin-left: (#{$i}em);
+      }
+      .margin-right-#{$i}-desktop {
+        margin-right: (#{$i}em);
+      }
+    }
+    .margin-top-1-7-desktop {
+      margin-top: 1.7em;
+    }
+    .margin-top-half-1-desktop {
+      margin-top: .5em;
+    }
+    .margin-top-half-6-desktop {
+      margin-top: .6em;
+    }
+  }
+}
+@include generate-margin-helper-classes();
+
+// GENERATE PADDING HELPER CLASSES
+@mixin generate-padding-helper-classes {
+  @for $i from 0 through $num-of-helper-classes {
+    .padding-#{$i} {
+      padding: (#{$i}em);
+    }
+    .padding-top-#{$i} {
+      padding-top: (#{$i}em);
+    }
+    .padding-bottom-#{$i} {
+      padding-bottom: (#{$i}em);
+    }
+    .padding-left-#{$i} {
+      padding-left: (#{$i}em);
+    }
+    .padding-right-#{$i} {
+      padding-right: (#{$i}em);
+    }
+    .padding-top-#{$i}-important {
+      padding-top: (#{$i}em) !important;;
+    }
+    .padding-bottom-#{$i}-important {
+      padding-bottom: (#{$i}em) !important;;
+    }
+    .padding-left-#{$i}-important {
+      padding-left: (#{$i}em) !important;;
+    }
+    .padding-right-#{$i}-important {
+      padding-right: (#{$i}em) !important;;
+    }
+  }
+  @media(min-width: $phone){
+    @for $i from 0 through $num-of-helper-classes {
+      .padding-top-#{$i}-tablet {
+        padding-top: (#{$i}em);
+      }
+      .padding-bottom-#{$i}-tablet {
+        padding-bottom: (#{$i}em);
+      }
+      .padding-left-#{$i}-tablet {
+        padding-left: (#{$i}em);
+      }
+      .padding-right-#{$i}-tablet {
+        padding-right: (#{$i}em);
+      }
+    }
+  }
+}
+@include generate-padding-helper-classes();
+
+.padding-0 {
+  padding: 0;
+}
+.padding-half-1 {
+  padding: .5em;
+}
+.padding-1-half {
+  padding: 1.5em;
+}
+.padding-right-half-1 {
+  padding-right: .5em;
+}
+
+@mixin generate-margins {
+  @each $direction in $directions {
+    @for $i from 0 through $numOfMarginClasses - 1 {
+      .margin-#{$direction}-#{$i} {
+        margin-#{$direction}: (#{$i}em);
+      }
+    }
+  }
+}
+@include generate-margins();
+
+// Github Star Count Icon
+.star-count {
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+}
+.mdl-list__item-avatar.demo-avatar {
+  width: 75px;
+  height: 75px;
+  border-radius: 24px;
+  border: 2px solid rgba($white, 0.9);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+// Material Icon Size Classes
+.md-32 {
+  font-size: 32px;
+}
+.md-28 {
+  font-size: 28px;
+}
+
+// Alignment Classes
+.vertical-align-3 {
+  vertical-align: 3px;
+}
+.vertical-align-minus-4 {
+    vertical-align: -4px;
+}
+
+// Drawer Navigation
+.mdl-layout__drawer {
+  .mdl-navigation  {
+    &.demo-navigation {
+      padding-top: 0;
+      .mdl-navigation__link--current {
+        background: rgba(0, 0, 0, .5);
+        color: rgba(255, 255, 255, .8);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,37 @@
+@import 'partials/variables';
+
+// @TODO: Go through and identify theme overrides then and add scss for those then compile using internal css and remove external call.
+//@import "node_modules/material-design-lite/src/material-design-lite.scss";
+
+@import 'partials/mixins';
+@import 'partials/helpers';
+@import 'partials/base';
+@import 'partials/typography';
+
+@import 'components/inputs';
+@import 'components/select';
+@import 'components/lists';
+@import 'components/alerts';
+@import 'components/tables';
+@import 'components/spinners';
+@import 'components/cards';
+@import 'components/dialogs';
+@import 'components/material-icons';
+@import 'components/social-icons';
+@import 'components/breadcrumbs';
+@import 'components/badges';
+@import 'components/chips';
+@import 'components/mdl-selectfield';
+@import 'components/mdl-tabs';
+@import 'components/weather-card';
+@import 'components/weather-icons/weather-icons';
+@import 'components/labels';
+@import 'components/mdl-toggle';
+@import 'components/mdl-color-wheel';
+@import 'components/avatar';
+@import 'components/dropzone';
+
+@import 'layouts/auth';
+@import 'layouts/dashboard';
+
+@import 'partials/demo';
