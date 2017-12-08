@@ -97,7 +97,7 @@
         @include('dialogs.dialog-delete', ['dialogTitle' => 'Confirm Coin Deletion', 'dialogSaveBtnText' => 'Delete'])
 
     @else
-        <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell margin-top-0-important mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-desktop mdl-cell--4-offset">
+        <div class="demo-updates mdl-card mdl-shadow--2dp mdl-cell margin-top-0-important mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop mdl-cell--3-offset">
             <div class="{{ $userCardBg }} mdl-card__title @if (Auth::user()->profile->user_profile_bg == NULL) @endif" @if (Auth::user()->profile->user_profile_bg != NULL) style="background: url('{{Auth::user()->profile->user_profile_bg}}') center/cover;" @endif>
                 <h2 class="mdl-card__title-text mdl-title-username mdl-color-text--white text-center">
                     You don't have any coins yet!

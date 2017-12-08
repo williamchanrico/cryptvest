@@ -41,7 +41,7 @@
 @section('content')
 
     <div class="mdl-grid full-grid margin-top-0 padding-0">
-        <div class="mdl-cell mdl-cell mdl-cell--4-col mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col-desktop mdl-card mdl-shadow--3dp margin-top-0 padding-top-0 mdl-cell--4-offset">
+        <div class="mdl-cell mdl-cell mdl-cell--6-col mdl-cell--6-col-phone mdl-cell--6-col-tablet mdl-cell--6-col-desktop mdl-card mdl-shadow--3dp margin-top-0 padding-top-0 mdl-cell--3-offset">
             <div class="mdl-color--white-100 mdl-color-text--white mdl-card mdl-shadow--2dp" style="width:100%;" itemscope itemtype="https://schema.org/Person">
 
                 <div class="mdl-card__title mdl-card--expand mdl-color--primary mdl-color-text--white">
