@@ -25,7 +25,6 @@ Thumbs.db
 
 ### DIFFERENT TYPE OF MASTER CONFIGS ###
 .env
-composer.lock
 
 ### ASSET EXCLUSIONS ###
 /node_modules
