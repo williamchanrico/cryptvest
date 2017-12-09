@@ -67,7 +67,8 @@
                     @endforeach
                 ],
                 colors: colors,
-                formatter: function (x) { return x + "%"}
+                formatter: function (x) { return x + "%"},
+                resize: true
 
             });
 
@@ -88,7 +89,8 @@
                     else {
                         return '#000';
                     }
-                }
+                },
+                resize: true
             });
         </script>
     @endif

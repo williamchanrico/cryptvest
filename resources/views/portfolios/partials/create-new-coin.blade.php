@@ -4,7 +4,7 @@
         <div class="mdl-grid full-grid padding-0">
             <div class="mdl-cell mdl-cell--12-col-phone mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
                 <div class="mdl-cell mdl-cell--8-col-tablet mdl-cell--8-col-desktop mdl-cell--2-offset">
-                    <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label mdl-select__fullwidth">
+                    <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label mdl-select__fullwidth" style="width: 100%;">
                         <select id="name" name="name" class="mdl-selectfield__select">
                             <option value=""></option>
                             @foreach($coins as $coin)
