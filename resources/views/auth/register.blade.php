@@ -36,6 +36,7 @@
                                             {!! Form::label('email', trans('auth.email') , array('class' => 'mdl-textfield__label')); !!}
                                             <span class="mdl-textfield__error">@if ($errors->has('email')){{{ $errors->first('email') }}} @endif</span>
                                         </div>
+                                        <span class="mdl-textfield__info">{{ env('ACTIVATION', false) ? "" : "Mail activation is currently DISABLED" }}</span>
                                     </div>
                                     <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--6-col-desktop">
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('first_name') ? 'is-invalid' :'' }}">
