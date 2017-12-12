@@ -17,7 +17,9 @@
                     </h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-
+                    <span class="mdl-textfield__info"><b>Demo Email:</b> <em>demo@cryptvest.tk</em></span><br>
+                    <span class="mdl-textfield__info"><b>Demo Password:</b> <em>demo@cryptvest.tk</em></span>
+                    
                     {!! Form::open(['url' => 'login', 'method' => 'POST', 'class' => '', 'id' => 'login', 'role' => 'form']) !!}
                         {{ csrf_field() }}
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label {{ $errors->has('email') ? 'is-invalid' :'' }}">
