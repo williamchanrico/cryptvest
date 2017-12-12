@@ -11,22 +11,17 @@ use Illuminate\Support\Facades\Redirect;
 
 class CoinsController extends Controller
 {
+    /**
+     * Coin Validation Rules.
+     *
+     * @var array
+     */
     protected $rules = [
         'name' => 'required',
         'amount' => 'required|numeric',
         'cost' => 'required|numeric',
         'note' => 'nullable'
     ];
-
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -60,17 +55,6 @@ class CoinsController extends Controller
 
         return redirect('/portfolio')->with('status', 'Coin created');
 
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
     }
 
     /**
@@ -115,8 +99,9 @@ class CoinsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy($id)
     {

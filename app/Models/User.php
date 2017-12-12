@@ -66,9 +66,9 @@ class User extends Authenticatable
     ];
 
     /**
-     * Build Social Relationships
+     * Build Social Relationship.
      *
-     * @var array
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function social()
     {
@@ -76,23 +76,31 @@ class User extends Authenticatable
     }
 
     /**
-     * User Profile Relationships
+     * User Profile Relationship.
      *
-     * @var array
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function profile()
     {
         return $this->hasOne('App\Models\Profile');
     }
 
-
-    // User Profile Setup - SHould move these to a trait or interface...
-
+    /**
+     * User Profile Relationship.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function profiles()
     {
         return $this->belongsToMany('App\Models\Profile')->withTimestamps();
     }
 
+    /**
+     * User Profile Checker.
+     *
+     * @param $name
+     * @return bool
+     */
     public function hasProfile($name)
     {
         foreach($this->profiles as $profile)
@@ -103,20 +111,31 @@ class User extends Authenticatable
         return false;
     }
 
+    /**
+     * Assign Profile to User.
+     *
+     * @param $profile
+     */
     public function assignProfile($profile)
     {
         return $this->profiles()->attach($profile);
     }
 
+
+    /**
+     * Remove Profile from User.
+     * @param $profile
+     * @return int
+     */
     public function removeProfile($profile)
     {
         return $this->profiles()->detach($profile);
     }
 
     /**
-     * User Portfolio Relationship
+     * User Portfolio Relationship.
      *
-     * @var array
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function portfolio()
     {
