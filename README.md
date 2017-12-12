@@ -13,6 +13,11 @@ Laravel 5.4 with user authentication, registration with email confirmation, soci
 CryptVest uses [API](https://coinmarketcap.com/api/) provided by **coinmarketcap.com** to obtain the current marketcap. CryptVest also uses laravel ORM modeling and has CRUD (Create Read Update Delete) functionality for all coins in user's portfolio.
 
 ### Quick Project Setup
+#### Demo User
+Email: ```demo@cryptvest.tk```
+Password: ```demo@cryptvest.tk```
+
+### Quick Project Setup
 ###### (Not including the dev environment)
 1. Run `git clone https://bitbucket.org/williamchanrico/cryptvest`
 2. Create a MySQL database for the project
