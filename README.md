@@ -17,6 +17,8 @@ Email: ```demo@cryptvest.tk```
 
 Password: ```demo@cryptvest.tk```
 
+Demo is hosted on private server: ```https://cryptvest.tk```
+
 ### Quick Project Setup
 ###### (Not including the dev environment)
 1. Run `git clone https://bitbucket.org/williamchanrico/cryptvest`
