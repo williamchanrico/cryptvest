@@ -121,7 +121,6 @@ class User extends Authenticatable
         return $this->profiles()->attach($profile);
     }
 
-
     /**
      * Remove Profile from User.
      * @param $profile
