@@ -4,7 +4,7 @@
 
 [![License](http://jeremykenedy.com/license-mit.svg)](https://raw.githubusercontent.com/jeremykenedy/laravel-material-design/master/LICENSE) 
 
-**CryptVest** is a platform for crypto investors to keep track of coins they ***hodl***, including how much did they invest in each of those coins. 
+**CryptVest** is a platform for crypto investors to keep track of coins they ***hodl***, including how much their investment in each of those coins are. 
 
 CryptVest will show how diversified their coins investment, including some other information like user's total net worth, profits, etc.
 
@@ -30,15 +30,19 @@ CryptVest uses [API](https://coinmarketcap.com/api/) provided by **coinmarketcap
 2. Open your web browser and go to `http://localhost`
 
 ### Screenshots
-![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/58dcccfc184c41bd54b9c16fd65bf5223af2b5b4/non-laravel-files/screenshots/screenshot1.png?token=145fc8b3054bbced75eaaf13fdda9869ecd1a4ec)
+![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/bae24156983f2f6874d0a006e506adbd6475badc/non-laravel-files/screenshots/screenshot1.png?token=90998bf2750b8fb43b8570f246f72987f55dcab1)
 
-![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/58dcccfc184c41bd54b9c16fd65bf5223af2b5b4/non-laravel-files/screenshots/screenshot2.png?token=27cfb3b9cc0c5ca985a6d413a5146142da1dca1a)
+![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/bae24156983f2f6874d0a006e506adbd6475badc/non-laravel-files/screenshots/screenshot2.png?token=d35abb157a487166bc3435d6764634f84e8a85d0)
 
-![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/58dcccfc184c41bd54b9c16fd65bf5223af2b5b4/non-laravel-files/screenshots/screenshot3.png?token=2354e2542ae5ab1276e6dbbc38bca579726597e5)
+![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/bae24156983f2f6874d0a006e506adbd6475badc/non-laravel-files/screenshots/screenshot3.png?token=b2c589fe89c6a6fbeb078b36968141fd9d92cc71)
 
-![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/58dcccfc184c41bd54b9c16fd65bf5223af2b5b4/non-laravel-files/screenshots/screenshot5.png?token=a3fefec941f794aa5990327e339685f976c39a3a)
+![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/bae24156983f2f6874d0a006e506adbd6475badc/non-laravel-files/screenshots/screenshot4.png?token=70fd90590f0237233847a16e5e623b5ccff4efa8)
 
-![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/58dcccfc184c41bd54b9c16fd65bf5223af2b5b4/non-laravel-files/screenshots/screenshot4.png?token=db0b7d63d1c9620568f060b6613a63a9cb5c2005)
+![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/bae24156983f2f6874d0a006e506adbd6475badc/non-laravel-files/screenshots/screenshot5.png?token=23ff79430d6b58b293e17ad619235c864a79c33c)
+
+![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/bae24156983f2f6874d0a006e506adbd6475badc/non-laravel-files/screenshots/screenshot6.png?token=5d380cffafb3e75efa129682fe0bc587d1c2f762)
+
+![screenshot](https://bytebucket.org/williamchanrico/cryptvest/raw/bae24156983f2f6874d0a006e506adbd6475badc/non-laravel-files/screenshots/screenshot7.png?token=61f184816813e2ef92f3eb98df78184181302171)
 
 ### Get Socialite Login and Other API Keys:
 * [Google Captcha API](https://www.google.com/recaptcha/admin#list)
