@@ -124,7 +124,7 @@ class UsersTableSeeder extends Seeder
             ])->toArray());
             $user->portfolio->save(Coin::create([
                 'portfolio_id'      => $user->portfolio->id,
-                'name'              => 'Stellar Lumens',
+                'name'              => 'Stellar',
                 'amount'            => 1800,
                 'cost'              => 200,
                 'note'              => 'stored on binance'
