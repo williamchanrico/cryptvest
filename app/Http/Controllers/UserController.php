@@ -74,6 +74,10 @@ class UserController extends Controller
 
         for($a = 0; $a < count($coins); $a++)
         {
+            if(!isset($m[$coins[$a]['name']])){
+                continue;
+            }
+
             $totalInvested += $coins[$a]['cost'];
             $netWorth += $marketcap[$m[$coins[$a]['name']]]->price_usd * $coins[$a]['amount'];
         }

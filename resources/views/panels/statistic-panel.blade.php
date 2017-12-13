@@ -82,37 +82,53 @@
         </thead>
         <tbody>
         @foreach($coins as $coin)
-            @php
-                $coinMc = $marketcap[$m[$coin['name']]];
-                $price = $coinMc->price_usd;
-                $worth = $price * $coin['amount'];
-                $profit = $worth - $coin['cost'];
-                $percentProfit = (float) $profit / $coin['cost'] * 100.0;
+            @if(isset($m[$coin['name']]))
+                @php
+                    $coinMc = $marketcap[$m[$coin['name']]];
+                    $price = $coinMc->price_usd;
+                    $worth = $price * $coin['amount'];
+                    $profit = $worth - $coin['cost'];
+                    $percentProfit = (float) $profit / $coin['cost'] * 100.0;
 
-                if($percentProfit > $highestCoin['profit'])
-                {
-                    $highestCoin['profit'] = $percentProfit;
-                    $highestCoin['name'] = $coin['name'];
-                }
+                    if($percentProfit > $highestCoin['profit'])
+                    {
+                        $highestCoin['profit'] = $percentProfit;
+                        $highestCoin['name'] = $coin['name'];
+                    }
 
-                if($percentProfit < $lowestCoin['profit'])
-                {
-                    $lowestCoin['profit'] = $percentProfit;
-                    $lowestCoin['name'] = $coin['name'];
-                }
-            @endphp
-            <tr id="{{ $coin['name'] }}">
-                <td>{{ $loop->iteration }}</td>
-                <td class="mdl-data-table__cell--non-numeric"><img src="https://files.coinmarketcap.com/static/img/coins/16x16/{{ $coinMc->id }}.png" alt=""> {{ $coin['name'] }}</td>
-                <td>${{ number_format((float) $coin['cost'], 2) }}</td>
-                <td>{{ $coin['amount'] . " " . $coinMc->symbol }} </td>
-                <td>${{ number_format((float) $price, 4) }}</td>
-                <td class="{{ (float) $percentProfit  < 0 ? "mdl-color-text--red" : "mdl-color-text--green" }}">{{ number_format((float) $percentProfit, 2) }}%</td>
-                <td>${{ number_format((float) $worth, 2) }}</td>
-            </tr>
-            @if(!empty($coin['note']))
+                    if($percentProfit < $lowestCoin['profit'])
+                    {
+                        $lowestCoin['profit'] = $percentProfit;
+                        $lowestCoin['name'] = $coin['name'];
+                    }
+                @endphp
+                <tr id="{{ $coin['name'] }}">
+                    <td>{{ $loop->iteration }}</td>
+                    <td class="mdl-data-table__cell--non-numeric"><img src="https://files.coinmarketcap.com/static/img/coins/16x16/{{ $coinMc->id }}.png" alt=""> {{ $coin['name'] }}</td>
+                    <td>${{ number_format((float) $coin['cost'], 2) }}</td>
+                    <td>{{ $coin['amount'] . " " . $coinMc->symbol }} </td>
+                    <td>${{ number_format((float) $price, 4) }}</td>
+                    <td class="{{ (float) $percentProfit  < 0 ? "mdl-color-text--red" : "mdl-color-text--green" }}">{{ number_format((float) $percentProfit, 2) }}%</td>
+                    <td>${{ number_format((float) $worth, 2) }}</td>
+                </tr>
+                @if(!empty($coin['note']))
+                    <div class="mdl-tooltip" for="{{ $coin['name'] }}">
+                        {{ $coin['note'] }}
+                    </div>
+                @endif
+            @else
+                <tr id="{{ $coin['name'] }}">
+                    <td>{{ $loop->iteration }}</td>
+                    <td class="mdl-data-table__cell--non-numeric mdl-color-text--red">{{ $coin['name'] }} - MARKETCAP NOT FOUND</td>
+                    <td>${{ number_format((float) $coin['cost'], 2) }}</td>
+                    <td>{{ $coin['amount'] }} </td>
+                    <td>${{ number_format((float) 0, 4) }}</td>
+                    <td>{{ number_format((float) 0, 2) }}%</td>
+                    <td>${{ number_format((float) 0, 2) }}</td>
+                </tr>
+
                 <div class="mdl-tooltip" for="{{ $coin['name'] }}">
-                    {{ $coin['note'] }}
+                    Edit/Update the coin name on your portfolio section.
                 </div>
             @endif
         @endforeach
