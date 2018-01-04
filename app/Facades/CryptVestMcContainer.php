@@ -2,6 +2,7 @@
 
 namespace App\Facades;
 
+use Cache;
 use GuzzleHttp\Client;
 
 /**
@@ -43,7 +44,7 @@ class CryptVestMcContainer
      */
     public function cryptoIds()
     {
-        $ticker = $this->makeRequest('ticker');
+        $ticker = $this->ticker();
 
         return array_map(function($o) {
             return $o->id;
@@ -57,7 +58,7 @@ class CryptVestMcContainer
      */
     public function cryptoNames()
     {
-        $ticker = $this->makeRequest('ticker');
+        $ticker = $this->ticker();
 
         return array_map(function($o) {
             return $o->name;
@@ -82,9 +83,17 @@ class CryptVestMcContainer
             $url .= $query;
         }
 
+        if(Cache::has($url)){
+            dd(Cache::get($url));
+            return Cache::get($url);
+        }
+
         $request = $client->request('GET', $url);
         $response = $request->getBody();
         $json = json_decode($response->getContents());
+
+        Cache::put($url, $json, 1);
+
         return $json;
     }
 
