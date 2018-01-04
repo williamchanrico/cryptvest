@@ -67,7 +67,7 @@ class UserController extends Controller
         $totalInvested = 0;
         $netWorth = 0;
 
-        for($a = 0; $a < 100; $a++)
+        for($a = 0; $a < count($marketcap); $a++)
         {
             $m[$marketcap[$a]->name] = $a;
         }
