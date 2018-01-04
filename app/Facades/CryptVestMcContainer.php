@@ -84,7 +84,6 @@ class CryptVestMcContainer
         }
 
         if(Cache::has($url)){
-            dd(Cache::get($url));
             return Cache::get($url);
         }
 
