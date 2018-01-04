@@ -22,7 +22,7 @@ class CryptVestMcContainer
      * @param  string $currency Currency for convert (default - USD)
      * @return json                    All ticker object
      */
-    public function ticker($limit = false, $currency = false)
+    public function ticker($limit = 0, $currency = false)
     {
         $params = array();
 
@@ -30,9 +30,7 @@ class CryptVestMcContainer
             $params['convert'] = $currency;
         }
 
-        if ($limit) {
-            $params['limit'] = $limit;
-        }
+        $params['limit'] = $limit;
 
         return $this->makeRequest('ticker', $params);
     }
