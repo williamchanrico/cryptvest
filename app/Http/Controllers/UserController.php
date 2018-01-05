@@ -46,7 +46,7 @@ class UserController extends Controller
      */
     public function marketcap()
     {
-        $coins = CryptVestMc::ticker();
+        $coins = CryptVestMc::ticker(200);
 
         return view('pages.marketcap')->with([
             'coins' => $coins
