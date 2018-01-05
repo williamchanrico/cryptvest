@@ -74,7 +74,7 @@ class UsersTableSeeder extends Seeder
         $user = User::where('email', '=', 'demo@cryptvest.tk')->first();
         if ($user === null) {
             $user = User::create(array(
-                'name'              => 'William Chanrico',
+                'name'              => 'williamchanrico',
                 'first_name'        => 'William',
                 'last_name'         => 'Chanrico',
                 'email'             => 'demo@cryptvest.tk',
@@ -85,7 +85,13 @@ class UsersTableSeeder extends Seeder
                 'signup_confirmation_ip_address' => $faker->ipv4
             ));
 
-            $user->profile()->save(new Profile);
+            $profile = new Profile();
+            $profile->twitter_username = 'williamchanrico';
+            $profile->github_username = 'williamchanrico';
+            $profile->location = 'Binus University, Anggrek Campus, North Sukabumi, West Jakarta City, Jakarta, Indonesia';
+
+            $user->profile()->save($profile);
+
             $user->portfolio()->save(new Portfolio);
             $user->portfolio->save(Coin::create([
                 'portfolio_id'      => $user->portfolio->id,
