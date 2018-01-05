@@ -19,7 +19,7 @@ Password: ```demo@cryptvest.tk```
 
 Demo is hosted on private server: ```https://cryptvest.tk```
 
-### Quick Project Setup
+### Quick Project Setup (from linux machine perspective, adjust accordingly on Windows/OSX)
 ###### (Not including the dev environment)
 1. Run `git clone https://bitbucket.org/williamchanrico/cryptvest`
 2. Create a MySQL database for the project
@@ -28,9 +28,11 @@ Demo is hosted on private server: ```https://cryptvest.tk```
 3. Configure the environment file `cp .env.example .env` // NOTE: Google API Key will prevent maps error
 4. Run `composer install` from the projects root folder
 5. Don't forget to set the correct permission according to your machine setup e.g: `chmod -R 755`
-6 `sudo php artisan key:generate`
+6. `sudo php artisan key:generate`
 7. `sudo php artisan migrate --seed`
-8. and finally run `composer dump-autoload` to generate autoload files
+8. setup laravel cache directory `mkdir -p storage/framework/{sessions,views,cache}`
+9. then `php artisan optimize'
+10. and finally run `composer dump-autoload` to generate autoload files
 
 #### View the Project in Browser
 1. From the projects root folder run `php artisan serve`
