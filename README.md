@@ -1,5 +1,5 @@
 ![logo](https://bytebucket.org/williamchanrico/cryptvest/raw/58dcccfc184c41bd54b9c16fd65bf5223af2b5b4/non-laravel-files/logo/logo.png?token=7aa6cdd21024b877a6955ef535e451b17a2663be)
-#### CryptVest is a project from my Web Programming class at Bina Nusantara University.
+
 #### The project is based on Laravel 5.4 and Google Material Design Lite 1.3 with full email and social authentication support.
 
 [![License](http://jeremykenedy.com/license-mit.svg)](https://raw.githubusercontent.com/jeremykenedy/laravel-material-design/master/LICENSE) 
